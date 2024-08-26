@@ -1,0 +1,79 @@
+# Ignore the target directory
+/target/
+
+# Ignore Maven dependency directory
+/.m2/
+
+# Ignore build files
+/build/
+
+# Ignore IntelliJ IDEA project files
+/.idea/
+/*.iml
+/*.ipr
+
+# Ignore Eclipse project files
+/.project
+/.classpath
+/.settings/
+
+# Ignore NetBeans project files
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Ignore Visual Studio Code directory
+/.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Linux system files
+*.swp
+
+# Ignore logs
+*.log
+/logs/
+
+# Ignore temporary files
+/tmp/
+*.tmp
+*.temp
+
+# Ignore OS-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore Java specific files
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore gradle files
+.gradle/
+/build/
+!gradle-wrapper.jar
+
+# Ignore other files
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore environment variables files
+.env
+.env.local
+.env.*.local
