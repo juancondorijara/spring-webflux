@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ms-spring-webflux-nosql
+  data:
+    mongodb:
+      database: nosql
+      uri: mongodb+srv://juan:12345@cluster0.zdl9n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
