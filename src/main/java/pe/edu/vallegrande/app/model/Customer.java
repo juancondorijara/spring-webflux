@@ -13,6 +13,6 @@ public class Customer {
     private String dni;
     private String firstName;
     private String lastName;
-    private String status;
+    private String state;
     
 }

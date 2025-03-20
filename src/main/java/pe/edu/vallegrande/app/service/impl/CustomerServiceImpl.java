@@ -4,13 +4,11 @@ import pe.edu.vallegrande.app.model.Customer;
 import pe.edu.vallegrande.app.repository.CustomerRepository;
 import pe.edu.vallegrande.app.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import lombok.extern.slf4j.Slf4j;
 
-//@RequiredArgsConstructor
 @Slf4j
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -37,12 +35,14 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Mono<Customer> save(Customer customer) {
         log.info("Registrando datos " + customer.toString());
+        customer.setState("A");
         return customerRepository.save(customer);
     }
 
     @Override
     public Mono<Customer> update(Customer customer) {
         log.info("Actualizando datos " + customer.toString());
+        customer.setState("A");
         return customerRepository.save(customer);
     }
 
