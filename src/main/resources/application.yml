@@ -1,0 +1,17 @@
+server:
+  port: 8082
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://ep-rough-dream-a5jgv01u-pooler.us-east-2.aws.neon.tech/sql?sslMode=require
+    username: user
+    password: password
+  sql:
+    init:
+      mode: always # Crea la tabla automáticamente al iniciar
+      schema-locations: classpath:schema.sql # Archivo con la estructura de la tabla
+      data-locations: classpath:data.sql # Archivo con datos iniciales (opcional)
+  logging:
+    level:
+      org.springframework.r2dbc: DEBUG
+

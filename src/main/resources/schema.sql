@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS customer (
+    id SERIAL PRIMARY KEY NOT NULL UNIQUE,
+    dni CHAR(8) NOT NULL UNIQUE,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    state CHAR(1) NOT NULL
+);
