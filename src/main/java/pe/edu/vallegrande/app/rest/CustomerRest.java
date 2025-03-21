@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("v1/api/customer")
+@RequestMapping("/v1/api/customer")
 public class CustomerRest {
 
     private final CustomerService customerService;
