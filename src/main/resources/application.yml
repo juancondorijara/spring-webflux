@@ -6,5 +6,5 @@ spring:
     name: ms-spring-webflux-nosql
   data:
     mongodb:
-      database: nosql
-      uri: mongodb+srv://user:password@cluster0.zdl9n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: vitrocco
+      uri: mongodb+srv://victor2025:victor2025@cluster0.w1ywt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
