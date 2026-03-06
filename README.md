@@ -43,7 +43,15 @@ Spring WebFlux | Data R2DBC | Project Reactor | R2DBC PostgreSQL
 </dependency>
 ```
 
-## **Dependencias Swagger para Spring WebFlux**
+## **Dependencia Lombok para Spring WebFlux**
+```
+<dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+</dependency>
+```
+## **Dependencia Swagger para Spring WebFlux**
 ```
 <dependency>
       <groupId>org.springdoc</groupId>
