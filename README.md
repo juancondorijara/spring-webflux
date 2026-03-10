@@ -56,6 +56,6 @@ Spring WebFlux | Data R2DBC | Project Reactor | R2DBC PostgreSQL
 <dependency>
       <groupId>org.springdoc</groupId>
       <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
-      <version>2.0.2</version>
+      <version>2.8.15</version>
 </dependency>
 ```
