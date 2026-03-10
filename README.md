@@ -12,11 +12,6 @@ Spring WebFlux | Data MongoDB Reactive | Project Reactor
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
 </dependency>
-<dependency>
-      <groupId>io.projectreactor</groupId>
-      <artifactId>reactor-test</artifactId>
-      <scope>test</scope>
-</dependency>
 ```
 
 ## **Dependencias Spring WebFlux + Postgre (SQL)**
@@ -36,6 +31,10 @@ Spring WebFlux | Data R2DBC | Project Reactor | R2DBC PostgreSQL
       <artifactId>r2dbc-postgresql</artifactId>
       <scope>runtime</scope>
 </dependency>
+```
+
+## **Dependencia Project Reactor para Spring WebFlux**
+```
 <dependency>
       <groupId>io.projectreactor</groupId>
       <artifactId>reactor-test</artifactId>
