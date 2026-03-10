@@ -32,14 +32,14 @@ Spring WebFlux | Data R2DBC | Project Reactor | R2DBC PostgreSQL
       <artifactId>spring-boot-starter-data-r2dbc</artifactId>
 </dependency>
 <dependency>
-      <groupId>io.projectreactor</groupId>
-      <artifactId>reactor-test</artifactId>
-      <scope>test</scope>
-</dependency>
-<dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>r2dbc-postgresql</artifactId>
       <scope>runtime</scope>
+</dependency>
+<dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-test</artifactId>
+      <scope>test</scope>
 </dependency>
 ```
 
