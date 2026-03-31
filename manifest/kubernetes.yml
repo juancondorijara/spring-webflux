@@ -1,0 +1,38 @@
+# MINIKUBE FUNCIONA EN CODESPACE | LOCAL
+# KUBECTL FUNCIONA DIRECTO EN KILLERCODA (SIN MINIKUBE)
+
+# consultar versión de minikube
+minikube version
+
+# consultar si minikube esta en start o stop
+minikube status
+
+# iniciar clúster kubernetes
+minikube start
+
+# ingresar a la carpeta de los manifiestos de kubernetes (manifest)
+cd manifest
+
+# listar namespace
+kubectl get namespace
+kubectl get ns
+
+# crear un namespace "juan" por comando mediante un archivo: "1-namespace.yml"
+kubectl apply -f 1-namespace.yml
+
+# consultar namespace en uso por "default" | LINUX
+kubectl config view --minify | grep namespace
+
+# consultar namespace en uso por "default" | WINDOWS
+kubectl config view --minify | findstr namespace
+
+# cambiar un namespace en uso por "default" a "juan"
+kubectl config set-context --current --namespace=juan
+
+# consultar todos los recursos de un namespace "juan"
+kubectl get all -n juan
+
+# consultar todos los recursos y secret de un namespace "juan"
+kubectl get all,secrets -n juan
+
+
