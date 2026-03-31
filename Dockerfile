@@ -12,12 +12,9 @@ COPY --from=builder /app/target/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
 
-# docker run -d --name sqlserver -p 1433:1433 juan321/sql-server:2022
+# docker build -t juan321/webflux-nosql:1.0 .
 
-# docker build -t juan321/back-end:1.0 .
+# docker run -d --name webflux-nosql -p 8081:8081 juan321/webflux-nosql:1.0
 
-# docker run -d --name back-end -p 8085:8085 juan321/back-end:1.0
+# docker push juan321/webflux-nosql:1.0
 
-# docker push juan321/back-end:1.0
-
-# docker push juan321/sql-server:2022
