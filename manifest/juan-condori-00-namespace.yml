@@ -1,0 +1,6 @@
+# kubectl create namespace juan-condori-00-namespace (COMANDO)
+# kubectl apply -f juan-condori-00-namespace.yml (yml)
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: juan-condori-00-namespace

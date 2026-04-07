@@ -1,0 +1,23 @@
+# kubectl apply -f juan-condori-00-deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: juan-condori-00-deployment
+  namespace: juan-condori-00-namespace
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: juan-condori-00-deployment        # Debe coincidir con las etiquetas del Service
+  template:
+    metadata:
+      labels:
+        app: juan-condori-00-deployment      # Debe coincidir con las etiquetas del Service
+    spec:
+      containers:
+      - name: juan-condori-00-container
+        image: juan321/webflux-nosql:1.0   # Reemplaza con tu imagen Docker Hub
+        imagePullPolicy: IfNotPresent        # Evitar traer siempre la última versión si hay una actual
+        #envFrom:
+        #- secretRef:
+        #    name: juan-condori-00-secret  # Esto cargará todos los valores como variables de entorno
