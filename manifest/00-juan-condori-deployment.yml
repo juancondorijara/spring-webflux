@@ -1,4 +1,4 @@
-# kubectl apply -f 4-deployment.yml
+# kubectl apply -f 00-juan-condori-deployment.yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
