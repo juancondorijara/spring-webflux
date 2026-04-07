@@ -17,8 +17,8 @@ cd manifest
 kubectl get namespace
 kubectl get ns
 
-# crear un namespace "juan" por comando mediante un archivo: "1-namespace.yml"
-kubectl apply -f 1-namespace.yml
+# crear un namespace "juan" por comando mediante un archivo: "juan-condori-00-namespace.yml"
+kubectl apply -f juan-condori-00-namespace.yml
 
 # consultar namespace en uso por "default" | LINUX
 kubectl config view --minify | grep namespace
@@ -26,13 +26,25 @@ kubectl config view --minify | grep namespace
 # consultar namespace en uso por "default" | WINDOWS
 kubectl config view --minify | findstr namespace
 
-# cambiar un namespace en uso por "default" a "juan"
-kubectl config set-context --current --namespace=juan
+# cambiar un namespace en uso por "default" a "juan-condori-00-namespace"
+kubectl config set-context --current --namespace=juan-condori-00-namespace
 
-# consultar todos los recursos de un namespace "juan"
-kubectl get all -n juan
+# consultar todos los recursos de un namespace "juan-condori-00-namespace"
+kubectl get all -n juan-condori-00-namespace
 
-# consultar todos los recursos y secret de un namespace "juan"
-kubectl get all,secrets -n juan
+# consultar todos los recursos y secret de un namespace "juan-condori-00-namespace"
+kubectl get all,secrets -n juan-condori-00-namespace
+
+
+# listar services del namespace "juan-condori-00-namespace"
+minikube service juan-condori-00-service -n juan-condori-00-namespace
+minikube service list
+
+# probar el microservicio dentro del clúster con curl
+curl http://192.168.49.2:30001/v1/api/customer
+curl http://192.168.49.2:30001/v1/api/customer/1
+
+# crear un túnel de puerto la máquina local (host) y el clúster de Kubernetes
+kubectl port-forward service/juan-condori-00-service 8081:30001
 
 
