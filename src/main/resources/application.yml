@@ -6,8 +6,10 @@ spring:
     name: ms-spring-webflux-nosql
   data:
     mongodb:
-      database: nosql
-      uri: mongodb+srv://juan:12345@cluster0.zdl9n.mongodb.net/?appName=Cluster0
+      database: ${DATABASE_NAME}
+      uri: ${DATABASE_URI}
+      #database: nosql
+      #uri: mongodb+srv://juan:12345@cluster0.zdl9n.mongodb.net/?appName=Cluster0
 
 springdoc:
   api-docs:
