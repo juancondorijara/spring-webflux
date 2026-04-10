@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: juan-condori-00-container
-        image: juan321/webflux-nosql:1.0   # Reemplaza con tu imagen Docker Hub
+        image: juan321/webflux-nosql:2.0   # Reemplaza con tu imagen Docker Hub
         imagePullPolicy: IfNotPresent        # Evitar traer siempre la última versión si hay una actual
-        #envFrom:
-        #- secretRef:
-        #    name: juan-condori-00-secret  # Esto cargará todos los valores como variables de entorno
+        envFrom:
+        - secretRef:
+            name: juan-condori-00-secret  # Esto cargará todos los valores como variables de entorno
