@@ -1,4 +1,4 @@
-# Spring WebFlux
+# Spring WebFlux + MongoDB (NoSQL)
 
 
 ## 📁 Estructura de Carpetas
