@@ -62,3 +62,45 @@
 ```
 
 
+## 🧪 Ejecución del Proyecto Spring Boot
+
+* **Opción 1:** `ProjectApplication.java`, archivo principal para ejecutar e iniciar el proyecto en la ruta:
+
+```bash
+🍃 PROJECT/
+├── 📁 src/
+│   ├── 📁 main/
+│   │   ├── 📁 java/pe/edu/vallegrande/project
+│   │   │   ├── 📁 model/
+│   │   │   ├── 📁 repository/
+│   │   │   ├── 📁 rest/
+│   │   │   └── 📁 service/
+│   │   ├── 📄 ProjectApplication.java
+````
+
+* **Opción 2:** a nivel de terminal con Maven, ubicandose dentro del directorio del proyecto:
+
+```bash
+mvn spring-boot:run
+````
+
+# Endpoint del proyecto Spring Boot
+
+* **Opción 1:** __[http://localhost:8081/v1/api/customer](http://localhost:8081/v1/api/customer)__
+
+* **Opción 2:** __[http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html)__
+
+* **Resultado:**
+```bash
+[
+  {
+    "id": "67dc27fdff48535c360c404e",
+    "dni": "12345678",
+    "firstName": "Juan",
+    "lastName": "Sanchez",
+    "state": "A"
+  }
+]
+````
+
+
