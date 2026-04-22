@@ -67,10 +67,10 @@
       <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
       <version>2.8.15</version>
 </dependency>
+```
 
 
 ## 🧪 Ejecución del Proyecto Spring Boot
-
 
 * **Opción 1:** `ProjectApplication.java`, archivo principal para ejecutar e iniciar el proyecto en la ruta:
 
@@ -94,10 +94,9 @@ mvn spring-boot:run
 
 # Endpoint del proyecto Spring Boot
 
-__[http://localhost:8082/v1/api/customer](http://localhost:8082/v1/api/customer)__
+* **Opción 1:** __[http://localhost:8082/v1/api/customer](http://localhost:8082/v1/api/customer)__
 
-__[http://localhost:8082/swagger-ui.html](http://localhost:8082/swagger-ui.html)__
-
+* **Opción 2:** __[http://localhost:8082/swagger-ui.html](http://localhost:8082/swagger-ui.html)__
 
 * **Resultado:**
 ```bash
