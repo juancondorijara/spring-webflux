@@ -34,8 +34,8 @@ jobs:
       - name: Build and Push Docker Image to Docker Hub
         uses: docker/build-push-action@v4
         with:
-          context: .
-          dockerfile: dockerfile-juan/Dockerfile
+          context: dockerfile-juan
+          dockerfile: Dockerfile
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:latest
