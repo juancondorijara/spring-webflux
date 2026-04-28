@@ -40,3 +40,5 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:${{ github.sha }}
+
+# Comentario para ejecutar el Pipeline
