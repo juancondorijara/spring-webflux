@@ -38,5 +38,5 @@ jobs:
           dockerfile: dockerfile-juan/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/juan321/webflux-nosql:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/juan321/webflux-nosql:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:${{ github.sha }}
