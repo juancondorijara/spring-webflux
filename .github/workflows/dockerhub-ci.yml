@@ -35,11 +35,11 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          dockerfile: dockerfile-juan/Dockerfile
+          #dockerfile: Dockerfile   # Dockerfile en la raíz del proyecto
+          file: ./dockerfile-juan/Dockerfile        # Dockerfile en la carpeta dockerfile-juan
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/webflux-nosql:${{ github.sha }}
 
 # Comentario para ejecutar el Pipeline
-# docker build -t juan321/webflux-nosql:3.0 -f dockerfile-juan/Dockerfile .
