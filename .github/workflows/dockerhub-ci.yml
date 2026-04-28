@@ -34,7 +34,7 @@ jobs:
       - name: Build and Push Docker Image to Docker Hub
         uses: docker/build-push-action@v4
         with:
-          context: dockerfile-juan
+          context: .
           dockerfile: Dockerfile
           push: true
           tags: |
