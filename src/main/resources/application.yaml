@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: spring-webflux-nosql
+  data:
+    mongodb:
+      database: DATABASE_MONGODB
+      uri: URL_MONDODB_ATALAS
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
