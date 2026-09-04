@@ -1,0 +1,11 @@
+# kubectl apply -f juan-condori-00-configmap.yml
+# kubectl delete -f juan-condori-00-configmap.yml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: juan-condori-00-configmap
+  namespace: juan-condori-00-namespace
+data:
+  MONGO_DATABASE: database_cloud
+  MONGO_URI: mongodb+srv://juan:12345@cluster0.zdl9n.mongodb.net/?appName=Cluster0
+  SERVER_PORT: "8081"

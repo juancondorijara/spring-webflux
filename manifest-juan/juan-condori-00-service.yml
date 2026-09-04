@@ -1,0 +1,15 @@
+# kubectl apply -f juan-condori-00-service.yml
+# kubectl delete -f juan-condori-00-service.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: juan-condori-00-service
+  namespace: juan-condori-00-namespace
+spec:
+  type: NodePort      #30000-32767  # Cambia a LoadBalancer si estás en un entorno de nube
+  ports:
+  - port: 30001       # Puerto que el Service expondrá
+    targetPort: 8081  # Puerto en el contenedor donde tu aplicación escucha
+    nodePort: 30001   # Puerto asignado en el nodo, opcional
+  selector:
+    app: juan-condori-00-deployment  # Debe coincidir con las etiquetas del Deployment
