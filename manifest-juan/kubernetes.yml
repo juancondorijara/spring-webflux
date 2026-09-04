@@ -1,4 +1,4 @@
-# MINIKUBE FUNCIONA EN CODESPACE | LOCAL
+# MINIKUBE FUNCIONA EN CODESPACE
 # KUBECTL FUNCIONA DIRECTO EN KILLERCODA (SIN MINIKUBE)
 
 # consultar versión de minikube
@@ -11,13 +11,13 @@ minikube status
 minikube start
 
 # ingresar a la carpeta de los manifiestos de kubernetes (manifest)
-cd manifest
+cd manifest-juan
 
 # listar namespace
 kubectl get namespace
 kubectl get ns
 
-# crear un namespace "juan" por comando mediante un archivo: "juan-condori-00-namespace.yml"
+# crear un namespace "juan-condori-00-namespace" por comando mediante un archivo: "juan-condori-00-namespace.yml"
 kubectl apply -f juan-condori-00-namespace.yml
 
 # consultar namespace en uso por "default" | LINUX
@@ -35,15 +35,24 @@ kubectl get all -n juan-condori-00-namespace
 # consultar todos los recursos y secret de un namespace "juan-condori-00-namespace"
 kubectl get all,secrets,configmaps -n juan-condori-00-namespace
 
-# listar services del namespace "juan-condori-00-namespace"
+# listar services del namespace "juan-condori-00-namespace" | CODESPACE
 minikube service juan-condori-00-service -n juan-condori-00-namespace
 minikube service list
 
-# probar el microservicio dentro del clúster con curl | CODESPACE
+# probar el proyecto dentro del clúster con curl | CODESPACE
 curl http://192.168.49.2:30001/v1/api/customer
-curl http://192.168.49.2:30001/v1/api/customer/1
 
-# crear un túnel de puerto la máquina local (host) y el clúster de Kubernetes
+# crear un túnel de puerto la máquina local (host) y el clúster de Kubernetes | CODESPACE
 kubectl port-forward service/juan-condori-00-service 8081:30001
 
 
+
+# -----------------------------------------------------------------------------------------
+# Consultar INTERNAL-IP del nodo de Kubernetes | KILLERCODA
+kubectl get nodes -o wide
+
+# probar el proyecto dentro del clúster con curl | KILLERCODA
+curl http://172.30.1.2:30001/v1/api/customer
+
+# crear un túnel de puerto la máquina local (host) y el clúster de Kubernetes | KILLERCODA
+kubectl port-forward service/juan-condori-00-service 30001:30001
