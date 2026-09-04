@@ -34,4 +34,19 @@ public class CustomerRest {
         return customerService.save(customer);
     }
 
+    @PutMapping ("/update")
+    public Mono<Customer> update(@RequestBody Customer customer) {
+        return customerService.update(customer);
+    }
+
+    @PatchMapping("/delete/{id}")
+    public Mono<Customer> delete(@PathVariable String id) {
+        return customerService.delete(id);
+    }
+
+    @PatchMapping("/restore/{id}")
+    public Mono<Customer> restore(@PathVariable String id) {
+        return customerService.restore(id);
+    }
+
 }

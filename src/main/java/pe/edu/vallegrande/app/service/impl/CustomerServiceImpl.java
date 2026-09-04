@@ -39,4 +39,31 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.save(customer);
     }
 
+    @Override
+    public Mono<Customer> update(Customer customer) {
+        log.info("Actualizando datos " + customer.toString());
+        customer.setState("A");
+        return customerRepository.save(customer);
+    }
+
+    @Override
+    public Mono<Customer> delete(String id) {
+        log.info("Delete Customer: " + id);
+        return customerRepository.findById(id)
+                .flatMap(customer -> {
+                    customer.setState("I");
+                    return customerRepository.save(customer);
+                });
+    }
+
+    @Override
+    public Mono<Customer> restore(String id) {
+        log.info("Restore Customer: " + id);
+        return customerRepository.findById(id)
+                .flatMap(customer -> {
+                    customer.setState("A");
+                    return customerRepository.save(customer);
+                });
+    }
+
 }

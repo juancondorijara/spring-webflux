@@ -1,14 +1,13 @@
 server:
-  port: 8081
+  port: ${SERVER_PORT:8081}
 
 spring:
   application:
     name: spring-webflux-nosql
   data:
     mongodb:
-      database: DATABASE
-      uri: mongodb+srv://USER:PASSWORD@cluster0.zdl9n.mongodb.net/?appName=Cluster0   #MongoDB Atlas (Cluod)
-      #uri: mongodb://USER:PASSWORD@localhost:27017/?authSource=admin   #MondoDB Container (Local)
+      database: ${MONGO_DATABASE}
+      uri: ${MONGO_URI}
 
 springdoc:
   api-docs:
