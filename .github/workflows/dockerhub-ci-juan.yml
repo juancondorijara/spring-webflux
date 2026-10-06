@@ -41,3 +41,5 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME_JUAN }}/s11-spring-webflux:latest
             ${{ secrets.DOCKERHUB_USERNAME_JUAN }}/s11-spring-webflux:${{ github.sha }}
+
+# CI PIPELINE GITHUB + DOCKERHUB
