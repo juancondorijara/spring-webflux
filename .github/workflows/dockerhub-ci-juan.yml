@@ -3,12 +3,12 @@ name: Docker Hub
 on:
   push:
     branches:
-      - main
       - develop # puedes añadir más ramas
+      - webflux-nosql
   pull_request:
     branches:
-      - main
       - develop # puedes añadir más ramas
+      - webflux-nosql
   schedule:
     # Ejecutar todos los días a las 8:00 AM hora Perú (UTC-5) → 1:00 PM UTC
     - cron: '0 13 * * *'
