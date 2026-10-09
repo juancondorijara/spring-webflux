@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8"/>
+
+<style>
+
+@page {
+    size: A4;
+    margin: 25px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333333;
+}
+
+/* CABECERA */
+
+.header {
+    border-bottom: 3px solid #1976D2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1976D2;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 5px;
+}
+
+/* INFORMACIÓN */
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin: 4px 0;
+}
+
+/* TABLA */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #1976D2;
+    color: white;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    font-size: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F7F9FC;
+}
+
+/* ESTADO */
+
+.estado-activo {
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.estado-inactivo {
+    color: #D32F2F;
+    font-weight: bold;
+}
+
+/* PIE */
+
+.footer {
+    margin-top: 30px;
+    border-top: 1px solid #CCCCCC;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #888888;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- CABECERA -->
+
+<div class="header">
+    <div class="title">
+        REPORTE DE CLIENTES
+    </div>
+
+    <div class="subtitle">
+        Sistema de Gestión de Clientes
+    </div>
+</div>
+
+<!-- DATOS DEL REPORTE -->
+
+<div class="info">
+    <p>
+        <strong>Fecha de generación:</strong>
+        <span th:text="${#temporals.format(#temporals.createNow(), 'dd/MMM/yyyy HH:mm')}"></span>
+    </p>
+
+    <p>
+        <strong>Total de clientes:</strong>
+        <span th:text="${#lists.size(customer)}"></span>
+    </p>
+</div>
+
+<!-- TABLA -->
+
+<table>
+
+    <thead>
+        <tr>
+            <th>DNI</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>ESTADO</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr th:each="customer : ${customer}">
+
+            <td th:text="${customer.dni}"></td>
+
+            <td th:text="${customer.firstName}"></td>
+
+            <td th:text="${customer.lastName}"></td>
+
+            <td th:text="${customer.state}"></td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+<!-- PIE -->
+
+<div class="footer">
+    Documento generado automáticamente por Spring Boot + Thymeleaf
+</div>
+
+</body>
+</html>

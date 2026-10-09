@@ -1,5 +1,7 @@
 package pe.edu.vallegrande.app.service;
 
+import org.springframework.http.codec.multipart.FilePart;
+
 import pe.edu.vallegrande.app.model.Customer;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -17,5 +19,11 @@ public interface CustomerService {
     Mono<Customer> delete(String id);
 
     Mono<Customer> restore(String id);
+
+    Flux<Customer> uploadCsv(FilePart filePart);
+
+    Mono<byte[]> exportExcel();
+
+    Mono<byte[]> exportPdf();
     
 }
